@@ -1,43 +1,25 @@
-[ ]subir toda ambiente com docker composer
-
-[ ]documentaçao da API no swagger
-
-
-[ X] Código de migração SQL que crie a base de dados
-
-
-[X ] CRIAR ALUNO todos os campos são obrigatórios
-
-
-[ X] CRIAR TURMA  todos os campos são obrigatórios
-
-
-[ X] LISTAR ALUNO (nome completo, matrícula e data de nascimento)
-
-
-[ X] LISTAR TURMA
-
-
-[ X] lISTE alunos de uma turma
-
-
-[ X]  listagem alunos da turma, deve haver a opção de remover o aluno da turma
-
-[ X] EXCLUIR TURMA 
-
-[X ] EXCLUIR ALUNO
-
-
 
 TO-DO
 
-Solucionar o erro de rede da requisição front e back no container. possivel erro de endereço (localmente funciona)
+Front editar e deletar 
+listar alunos da turma
 
-- Adicionar Swagger
+Dockerizar e testar a Dockerizaçao (mudar o banco para o docker)
+
+Adicional swgger e documentaçao no back 
 
 
+Regras do desafio
 
+todos campos obrigatórios e um aluno pode nçao ter uma turma 
+- Aluno (id, nome completo, matrícula e data de nascimento, turma(chave estrangueira de id turma)).
 
+- Turma (id, nome, horário de início das aulas - local-time -, flag de ativo ou inativa).
+
+recources
+db.migration 
+
+V1_criar_tabelas_aluno_turma
 
 
 
@@ -79,12 +61,12 @@ para turmas  exemplo
   "ativo": true
 }
 
----------- documentação de estudo------
+
 configuração do a imagem mysql docker caso ja tenha feito isso so crie a base " escola" e pule essa parte.
 
 passo 1- baixe o docker (abra o terminal como admin) e execute um docker -v" para ter certeza que esta instalado.
 
-passo 2 - baixe uma imagem do mysql no docker execute o comando "docker pull mysql:5.7".
+passo 2 - baixe uma imagem do mysql no docker execute o comando "sudo docker pull mysql:5.7".
 
 passo 3 - "docker run -e MYSQL_ROOT_PASSWORD=root --name meu-mysql -d mysql:5.7"
 
