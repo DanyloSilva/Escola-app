@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     getTurmas() {
-      axios.get('http://localhost:8080/turmas')
+      axios.get('http://java-app:8080/turmas')
         .then(res => {
           this.turmas = res.data;
         })
@@ -65,7 +65,7 @@ export default {
     },
     deletarTurma(id) {
       if (confirm('Tem certeza que deseja excluir esta turma? A exclusão é lógica. Caso queira resgatar entre em contato com os desenvolvedores.')) {
-        axios.delete(`http://localhost:8080/turmas/${id}`)
+        axios.delete(`http://java-app:8080/turmas/${id}`)
           .then(() => {
             console.log('Turma excluída com sucesso!');
             this.getTurmas();
