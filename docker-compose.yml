@@ -1,0 +1,53 @@
+version: '2.2'
+
+services:
+  # Container para backend em java
+  java-app:
+    container_name: back-java
+    # Comando para executar o build do Dockerfile
+    build:
+      context: ./back-end/api-escola/
+    restart: always
+    ports:
+      - "8080:8080"
+    # Passa a url de conexão como variavel de ambiente
+    environment:
+      - spring.datasource.url=jdbc:mysql://mysql-db:3306/escola
+      - spring.datasource.username=root
+      - spring.datasource.password=root
+    networks:
+      - java-mysql-vue
+    depends_on:
+      - mysql-db
+
+  # Container de banco de dados mysql
+  mysql-db:
+    container_name: db
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: escola
+    volumes:
+      - datamysql:/var/lib/mysql
+    networks:
+      - java-mysql-vue
+    ports:
+      - "3306:3306"
+  # Container de front-end com Vue
+  frontend:
+    container_name: front-vue
+    build:
+      context: ./front-end/front-escola/
+    ports:
+      - "5173:5173"
+    networks:
+      - java-mysql-vue
+    depends_on:
+      - java-app
+      - mysql-db
+
+volumes:
+  datamysql:
+  
+networks:
+  java-mysql-vue:
