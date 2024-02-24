@@ -1,13 +1,30 @@
 [ ]subir toda ambiente com docker composer
+
 [ ]documentaçao da API no swagger
+
+
 [ X] Código de migração SQL que crie a base de dados
+
+
 [X ] CRIAR ALUNO todos os campos são obrigatórios
+
+
 [ X] CRIAR TURMA  todos os campos são obrigatórios
+
+
 [ X] LISTAR ALUNO (nome completo, matrícula e data de nascimento)
+
+
 [ X] LISTAR TURMA
+
+
 [ X] lISTE alunos de uma turma
+
+
 [ X]  listagem alunos da turma, deve haver a opção de remover o aluno da turma
+
 [ X] EXCLUIR TURMA 
+
 [X ] EXCLUIR ALUNO
 
 
