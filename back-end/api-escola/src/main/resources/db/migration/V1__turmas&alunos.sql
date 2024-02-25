@@ -20,6 +20,15 @@ CREATE TABLE alunos (
                         FOREIGN KEY (turma_id) REFERENCES turmas(id),
                         PRIMARY KEY (id)
 );
+INSERT INTO turmas (nome, horario_inicio, ativo)
+VALUES ('JAVA', '08:00:00', 1),
+       ('História', '10:00:00', 1),
+       ('Ciências', '13:30:00', 1);
+
+INSERT INTO alunos (turma_id, nome, matricula, data_nascimento, ativo)
+VALUES (1, 'João Silva', '123456', '2005-03-15', 1),
+       (2, 'Maria Souza', '789012', '2004-07-22', 1),
+       (3, 'Pedro Santos', '345678', '2006-01-10', 1);
 
 
 
