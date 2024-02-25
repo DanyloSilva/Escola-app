@@ -1,3 +1,7 @@
+
+Para rodar basta entrar na pasta do projeto e dar um docker composer up --build
+
+
 [ x ]subir toda ambiente com docker composer
 
 
