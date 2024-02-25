@@ -1,7 +1,5 @@
 [ x ]subir toda ambiente com docker composer
 
-[ ]documentaçao da API no swagger
-
 
 [ X] Código de migração SQL que crie a base de dados
 
