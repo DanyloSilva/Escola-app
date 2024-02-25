@@ -1,4 +1,4 @@
-[ ]subir toda ambiente com docker composer
+[ x ]subir toda ambiente com docker composer
 
 [ ]documentaçao da API no swagger
 
