@@ -22,7 +22,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("alunos")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class AlunosController {
     @Autowired
     private AlunosRepository repository;
